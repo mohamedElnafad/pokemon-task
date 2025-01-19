@@ -30,13 +30,6 @@ jest.mock('../../api/pokemonApi.ts', () => ({
   useGetPokemonListQuery: jest.fn(),
 }));
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  Link: ({ children, to }: { children: React.ReactNode; to: string }) => (
-    <a href={to}>{children}</a>
-  ),
-}));
-
 describe('PokemonList Component', () => {
   beforeEach(() => {
     (useGetPokemonListQuery as jest.Mock).mockReturnValue({
