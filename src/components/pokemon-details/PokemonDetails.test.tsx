@@ -18,7 +18,7 @@ const mockData: PokemonDetailsModel = {
   height: 7,
   weight: 69,
   types: [{ type: { name: 'grass' } }, { type: { name: 'poison' } }],
-  img: 'bulbasaur.svg',
+  image: 'bulbasaur.svg',
 };
 describe('PokemonDetails Component', () => {
   beforeEach(() => {
@@ -46,7 +46,7 @@ describe('PokemonDetails Component', () => {
     render(<Provider store={store} children={<PokemonDetails id='1' />} />);
 
     const imgElement = screen.getByTestId('pokemon-image');
-    expect(imgElement).toHaveAttribute('src', mockData.img);
+    expect(imgElement).toHaveAttribute('src', mockData.image);
     expect(imgElement).toHaveAttribute('alt', mockData.name);
   });
 

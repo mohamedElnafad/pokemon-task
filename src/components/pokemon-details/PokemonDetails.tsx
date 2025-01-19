@@ -15,7 +15,11 @@ const PokemonDetails = ({ id }: { id: string }) => {
         data && (
           <div data-testid='pokemon-details-container'>
             <h1 data-testid='pokemon-name'>{data?.name}</h1>
-            <img src={data?.img} alt={data?.name} data-testid='pokemon-image' />
+            <img
+              src={data?.image}
+              alt={data?.name}
+              data-testid='pokemon-image'
+            />
             <table data-testid='pokemon-details-table'>
               <tbody>
                 <tr data-testid='pokemon-name-row'>

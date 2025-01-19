@@ -2,11 +2,11 @@ import React from 'react';
 import PokemonList from './PokemonList';
 import { useGetPokemonListQuery } from '../../api/pokemonApi';
 import { PokemonModel } from '../../models/types';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import configureMockStore from 'redux-mock-store';
 import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 const mockData: PokemonModel[] = [
   {
@@ -45,14 +45,26 @@ describe('PokemonList Component', () => {
       isLoading: false,
     });
   });
-  xit('renders the Pokemon list container', () => {
+  it('renders the Pokemon list container', () => {
     const { container } = render(
-      <Link to='/'>
+      <BrowserRouter>
         <Provider store={store} children={<PokemonList />} />
-      </Link>
+      </BrowserRouter>
     );
     expect(container).toBeInTheDocument();
-    // const container = screen.getByTestId('pokemon-list-container');
-    // expect(container).toBeInTheDocument();
+  });
+
+  it('renders the Pokemon list correctly', () => {
+    render(
+      <BrowserRouter>
+        <Provider store={store} children={<PokemonList />} />
+      </BrowserRouter>
+    );
+
+    const pokemonList = screen.getByTestId('pokemon-list');
+    expect(pokemonList).toBeInTheDocument();
+
+    const pokemonItems = screen.getByTestId('pokemon-list').childNodes;
+    expect(pokemonItems).toHaveLength(mockData.length);
   });
 });

@@ -25,7 +25,7 @@ export const pokemonApi = createApi({
         height: response.height,
         weight: response.weight,
         types: response.types,
-        img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${response.id}.svg`,
+        image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${response.id}.svg`,
       }),
     }),
   }),

@@ -18,7 +18,7 @@ const PokemonList: React.FC = () => {
         <div className='loading'>Loading...</div>
       ) : (
         data && (
-          <ul className='pokemon-list'>
+          <ul className='pokemon-list' data-testId='pokemon-list'>
             {data.map((pokemon: PokemonModel) => (
               <li key={pokemon.id} className='pokemon-item'>
                 <Link to={`/pokemon/${pokemon.id}`}>
