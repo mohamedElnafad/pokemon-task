@@ -1,0 +1,84 @@
+.pokemon-container {
+  width: 300px;
+  height: 480px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pokemon-header {
+  background-color: #4285f4;
+  width: 100%;
+  color: white;
+  text-align: start;
+  margin: 0;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.error,
+.loading,
+.no-data {
+  padding: 20px;
+  color: #666;
+  font-size: 1.2rem;
+}
+.pokemon-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.pokemon-list a {
+  text-decoration: none;
+  color: black;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pokemon-item:last-child {
+  border-bottom: none;
+}
+
+.pokemon-item {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  justify-content: space-around;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.pokemon-item:hover {
+  background-color: #f0f0f0;
+}
+
+.pokemon-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.pokemon-list::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pokemon-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pokemon-list::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: gray;
+}
