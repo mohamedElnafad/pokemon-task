@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useGetPokemonDetailsQuery } from '../../api/pokemonApi';
 import './PokemonDetails.css';
-const PokemonDetails = ({ id }: { id?: string }) => {
+const PokemonDetails = ({ id }: { id: string }) => {
   const { data, error, isLoading } = useGetPokemonDetailsQuery(id!);
 
   return (
