@@ -32,6 +32,8 @@ To run the unit tests and know coverage:
 ```bash
 npm run test -- --coverage
 ```
+![Logo](![image](https://github.com/user-attachments/assets/64d9f0b6-69c3-44d8-95da-c251a29ab922)
+)
 
 ## Contributor
 
