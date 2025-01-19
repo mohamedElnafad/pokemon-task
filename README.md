@@ -31,7 +31,6 @@ To run the unit tests and know coverage:
 
 ```bash
 npm run test -- --coverage
-
 ```
 
 ## Contributor
