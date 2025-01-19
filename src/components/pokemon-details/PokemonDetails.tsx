@@ -1,17 +1,14 @@
 import React from 'react';
 
-import { useGetPokemonDetailsQuery } from '../../api/pokemonApi.ts';
+import { useGetPokemonDetailsQuery } from '../../api/pokemonApi';
 import './PokemonDetails.css';
-const PokemonDetails = ({ id }: { id: string }) => {
+const PokemonDetails = ({ id }: { id?: string }) => {
   const { data, error, isLoading } = useGetPokemonDetailsQuery(id!);
 
-  if (error) {
-    <div>Error fetching Pokemon details</div>;
-  }
   return (
     <div className='pokemon-details-container'>
       {error ? (
-        <div>No Pokemon found</div>
+        <div>Error fetching Pokemon details</div>
       ) : isLoading ? (
         <div>Loading...</div>
       ) : (

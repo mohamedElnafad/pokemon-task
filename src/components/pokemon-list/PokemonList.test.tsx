@@ -2,8 +2,7 @@ import React from 'react';
 import PokemonList from './PokemonList';
 import { useGetPokemonListQuery } from '../../api/pokemonApi';
 import { PokemonModel } from '../../models/types';
-
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import configureMockStore from 'redux-mock-store';
 import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
@@ -33,7 +32,9 @@ jest.mock('../../api/pokemonApi.ts', () => ({
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
-  Link: jest.fn(),
+  Link: ({ children, to }: { children: React.ReactNode; to: string }) => (
+    <a href={to}>{children}</a>
+  ),
 }));
 
 describe('PokemonList Component', () => {

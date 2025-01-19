@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGetPokemonListQuery } from '../../api/pokemonApi.ts';
+import { useGetPokemonListQuery } from '../../api/pokemonApi';
 import { Link } from 'react-router-dom';
 import './PokemonList.css';
 import { PokemonModel } from '../../models/types';
