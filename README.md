@@ -32,7 +32,6 @@ To run the unit tests and know coverage:
 npm run test -- --coverage
 ```
 
-![Logo](images\coverage.png)
 
 ## Contributor
 
