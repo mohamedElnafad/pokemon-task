@@ -24,7 +24,7 @@ npm start
 
 #### f. **Running Tests**
 
-````markdown
+
 ## Running Tests
 
 To run the unit tests and know coverage:
