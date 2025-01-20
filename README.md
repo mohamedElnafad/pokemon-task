@@ -11,10 +11,16 @@ A React application using TypeScript and RTK Query to display Pokemon details.
 
 - Clone the repository:
   ```bash
-  git clone <https://github.com/mohamedElnafad/pokemon-task>
+  [git clone <https://github.com/mohamedElnafad/pokemon-task>](https://github.com/mohamedElnafad/pokemon-task.git)
   ```
 
 ## Running the Application
+
+ Install dependencies:
+```bash
+npm install
+```
+
 
 To start the application in development mode:
 
@@ -26,8 +32,13 @@ npm start
 
 ## Running Tests
 
-To run the unit tests and know coverage:
+To run the unit tests:
 
+```bash
+npm run test
+```
+
+To get test coverage 
 ```bash
 npm run test -- --coverage
 ```
@@ -37,6 +48,4 @@ npm run test -- --coverage
 
 - Mohamed Elnafad
 
-```
 
-```
