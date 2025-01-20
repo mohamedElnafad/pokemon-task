@@ -11,7 +11,7 @@ A React application using TypeScript and RTK Query to display Pokemon details.
 
 - Clone the repository:
   ```bash
-  [git clone <https://github.com/mohamedElnafad/pokemon-task>](https://github.com/mohamedElnafad/pokemon-task.git)
+  git clone https://github.com/mohamedElnafad/pokemon-task.git
   ```
 
 ## Running the Application
